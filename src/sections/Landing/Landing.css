@@ -1,0 +1,7 @@
+.landing-container {
+  /* padding-top to account for top navbar */
+  padding-top: 56px;
+  /* height: 700px; */
+  height: 100vh;
+  background-color: blue;
+}
