@@ -1,0 +1,67 @@
+/* .blissely-container {
+    height: 800px;
+} */
+
+.blissely-header {
+    font-size: 100px;
+    font-family: Arial;
+    text-align: center;
+}
+
+.blissely-subheader {
+    text-align: center;
+    font-size: 25px;
+}
+
+.blissely-link {
+    font-size: 20px;
+    text-decoration: none;
+    text-align: center;
+    color: black;
+}
+
+.blissely-description {
+    display: flex;
+    justify-content: space-around;
+}
+
+.blissely-header-text {
+    font-size: 25px;
+    font-family: Arial;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.blissely-text {
+    font-size: 22px;
+    font-family: Arial;
+}
+
+.blissely-what {
+    width: 50%;
+}
+
+.blissely-features {
+    width: 40%;
+}
+
+.blissely-what-header, .blissely-features-header {
+    font-size: 40px;
+    font-family: Arial;
+    text-decoration: underline;
+}
+
+.blissely-details {
+    display: flex;
+    justify-content: center;
+    /* background-color: red; */
+}
+
+.blissely-graphic-flow {
+    /* height: 600px; */
+    /* width: 600px; */
+    width: 30%;
+    object-fit: contain;
+    background-color: white;
+    border-radius: 50px;
+}

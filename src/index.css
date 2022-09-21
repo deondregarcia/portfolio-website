@@ -1,5 +1,7 @@
-/* :root {
-} */
+:root {
+  --main-fill: #0b0b16;
+  --main-outline: #5eb0df;
+}
 
 * {
   box-sizing: border-box;
