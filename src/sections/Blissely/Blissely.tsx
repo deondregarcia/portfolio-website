@@ -24,73 +24,50 @@ const Blissely = () => {
             Blissely divides its bucket lists into four categories for tweakable
             privacy settings:
           </p>
-          <ul>
-            <li>
-              <p className="blissely-text">
-                <strong>Private</strong> lists can only be viewed by its
+              <div className="blissely-text category-one">
+                <h4 style={{ textAlign: "center"}}>Private</h4> 
+                Can only be viewed by its
                 creator/owner
-              </p>
-            </li>
-            <li>
-              <p className="blissely-text">
-                <strong>Shared</strong> lists can only be viewed by its owner
+              </div>
+              <div className="blissely-text category-two">
+                <h4 style={{ textAlign: "center"}}>Shared</h4> Can only be viewed by its owner
                 and friends that the owner chooses to share it with
-              </p>
-            </li>
-            <li>
-              <p className="blissely-text">
-                <strong>Public - Friend</strong> lists can be viewed by the
+              </div>
+              <div className="blissely-text category-three">
+                <h4 style={{ textAlign: "center"}}>Public - Friend</h4> Can be viewed by the
                 owner and all of the owner's friends
-              </p>
-            </li>
-            <li>
-              <p className="blissely-text">
-                <strong>Public - Random</strong> lists can be viewed by anyone,
-                even if they're not logged in
-              </p>
-            </li>
-          </ul>
+              </div>
+              <div className="blissely-text category-four">
+                <h4 style={{ textAlign: "center"}}>Public - Random</h4> Can be viewed by anyone,
+                even if not logged in
+              </div>
         </div>
         <div className="blissely-features">
           <h3 className="blissely-features-header">Features</h3>
-          <ul>
-            <li>
-              <p className="blissely-text">
+              <div className="blissely-text feature-one">
                 <strong>User authentication</strong> with Google OAuth 2.0 and
                 PassportJS
-              </p>
-            </li>
-            <li>
-              <p className="blissely-text">
+              </div>
+              <div className="blissely-text feature-two">
                 Extensive <strong>authorization flows</strong> which protect
                 routes and block content based on a myriad of considerations for
                 maximum privacy configurations for the user
-              </p>
-            </li>
-            <li>
-              <p className="blissely-text">
+              </div>
+              <div className="blissely-text feature-three" >
                 <strong>CRUD</strong> functionality on a <strong>MySQL</strong>{" "}
                 database - hosted on <strong>AWS Aurora</strong> through{" "}
                 <strong>RESTful APIs</strong>
-              </p>
-            </li>
-            <li>
-              <p className="blissely-text">
+              </div>
+              <div className="blissely-text feature-four">
                 Responsive UI design with highly interactive components and
                 flexible CSS breakpoints
-              </p>
-            </li>
-            <li>
-              <p className="blissely-text">
+              </div>
+              <div className="blissely-text feature-five">
                 <strong>Database normalization</strong> up to Third Normal Form
-              </p>
-            </li>
-            <li>
-              <p className="blissely-text">
+              </div>
+              <div className="blissely-text feature-six">
                 <strong>Friend management</strong> system
-              </p>
-            </li>
-          </ul>
+              </div>
         </div>
       </div>
       <div className="blissely-details">
@@ -99,15 +76,15 @@ const Blissely = () => {
           src={imagesIndex.BucketListPrivacy}
           alt="Bucket List Auth Flow"
         />
+          <img
+            className="blissely-graphic-flow"
+            src={imagesIndex.BlisselyDatabaseSchema}
+            alt="Blissely database schema"
+          />
         <img
           className="blissely-graphic-flow"
           src={imagesIndex.ViewingProfiles}
           alt="Viewing Profiles Auth Flow"
-        />
-        <img
-          className="blissely-graphic-flow"
-          src={imagesIndex.BlisselyDatabaseSchema}
-          alt="Blissely database schema"
         />
       </div>
     </div>
