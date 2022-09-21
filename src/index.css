@@ -1,6 +1,8 @@
 :root {
   --main-fill: #0b0b16;
   --main-outline: #5eb0df;
+  --blissely-dark: #8442f7;
+  --blissely-light: #bba8db;
 }
 
 * {
@@ -15,4 +17,9 @@ body {
 
 html {
   scroll-behavior: smooth;
+}
+
+@font-face {
+  font-family: "Sarabun";
+  src: url("./assets/fonts/blissely/Sarabun-Light.ttf") format("truetype");
 }
