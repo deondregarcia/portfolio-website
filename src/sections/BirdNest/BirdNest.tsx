@@ -7,24 +7,24 @@ const birdNestOptions = {
   threshold: 0.8,
 };
 
-const birdNestObserverLeft = new IntersectionObserver(function(entries, birdNestObserver) {
+const birdNestObserverLeft = new IntersectionObserver(function(entries, birdNestObserverLeft) {
   entries.forEach(entry => {
     if (!entry.isIntersecting) {
       return;
     } else {
       entry.target.classList.add("slide-in-left");
-      birdNestObserver.unobserve(entry.target);
+      birdNestObserverLeft.unobserve(entry.target);
     }
   })
 }, birdNestOptions);
 
-const birdNestObserverRight = new IntersectionObserver(function(entries, birdNestObserver) {
+const birdNestObserverRight = new IntersectionObserver(function(entries, birdNestObserverRight) {
   entries.forEach(entry => {
     if (!entry.isIntersecting) {
       return;
     } else {
       entry.target.classList.add("slide-in-right");
-      birdNestObserver.unobserve(entry.target);
+      birdNestObserverRight.unobserve(entry.target);
     }
   })
 }, birdNestOptions);
@@ -54,7 +54,7 @@ const BirdNest = () => {
     <p className="bn-subheader">
         Tech Stack: React Native, Javascript, Redux, Node, Express, and MySQL 
       </p>
-      <a className="bn-link" href="https://github.com/deondregarcia/bird-nest">
+      <a className="bn-link" href="https://github.com/deondregarcia/bird-nest" target="_blank">
         <h2>Link to GitHub</h2>
       </a>
     <div className="bn-separator" />

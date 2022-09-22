@@ -211,14 +211,6 @@
     opacity: 1;
     transform: scale(1.06);
   }
-  70% {
-    opacity: 1;
-    transform: scale(1.05);
-  }
-  80% {
-    opacity: 1;
-    transform: scale(1.04);
-  }
   100% {
     opacity: 1;
     transform: scale(1);

@@ -58,7 +58,7 @@ const Blissely = () => {
         Tech Stack: TypeScript, React, Node, Express, and MySQL hosted on AWS
         Aurora
       </p>
-      <a className="blissely-link" href="https://blissely.herokuapp.com">
+      <a className="blissely-link" href="https://blissely.herokuapp.com" target="_blank">
         <h2>Link to live website</h2>
       </a>
       <div className="blissely-description">
