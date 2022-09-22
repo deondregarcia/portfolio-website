@@ -30,6 +30,54 @@
 
 .navbar-link {
   font-size: 30px;
-  margin-left: 50px;
+  margin-left: 60px;
   color: var(--main-gray);
+}
+
+.link-selected {
+  transform: scale(1.03);
+  color: var(--main-outline);
+}
+
+.navbar-link:hover {
+  color: var(--main-outline);
+  transform: scale(1.03);
+  transition: transform 200ms ease, color 200ms ease;
+}
+
+.dropdown-wrapper {
+  display: none;
+}
+
+@media screen and (max-width: 1500px) {
+  .navbar-header {
+    font-size: 30px;
+  }
+  .navbar-link {
+    font-size: 25px;
+    margin-left: 40px;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .navbar-header {
+    font-size: 25px;
+  }
+  .navbar-link {
+    font-size: 20px;
+    margin-left: 25px;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .navbar-container {
+    justify-content: center;
+  }
+  .dropdown-wrapper {
+    display: block;
+    margin-left: 5%;
+  }
+  .navbar-links-container {
+    display: none;
+  }
 }

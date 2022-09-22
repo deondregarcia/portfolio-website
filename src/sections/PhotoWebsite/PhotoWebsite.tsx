@@ -54,7 +54,27 @@ const photoWebsiteImageObserver = new IntersectionObserver(
   }
 );
 
-const PhotoWebsite = () => {
+const PhotoWebsite = ({
+  setObservedSection,
+}: {
+  setObservedSection: React.Dispatch<React.SetStateAction<string>>;
+}) => {
+  const sectionObserver = new IntersectionObserver(
+    function (entries, sectionObserver) {
+      entries.forEach((entry) => {
+        if (!entry.isIntersecting) {
+          return;
+        } else {
+          setObservedSection("photo-website");
+        }
+      });
+    },
+    {
+      root: null,
+      threshold: 0.1,
+    }
+  );
+
   useEffect(() => {
     const photoWebsiteFeaturesLeft =
       document.querySelectorAll(".pw-feature-left");
@@ -71,6 +91,11 @@ const PhotoWebsite = () => {
     const photoWebsiteImages = document.querySelectorAll(".pw-image");
     photoWebsiteImages.forEach((image) => {
       photoWebsiteImageObserver.observe(image);
+    });
+
+    const section = document.querySelectorAll(".pw-container");
+    section.forEach((section) => {
+      sectionObserver.observe(section);
     });
 
     return () => {

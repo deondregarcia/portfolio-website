@@ -1,7 +1,8 @@
 import React from "react";
+import Dropdown from "../../components/Dropdown/Dropdown";
 import "./Navbar.css";
 
-const Navbar = () => {
+const Navbar = ({ observedSection }: { observedSection: string }) => {
   return (
     <div className="navbar-container">
       <a href="#landing">
@@ -9,17 +10,52 @@ const Navbar = () => {
       </a>
       <div className="navbar-links-container">
         <a href="#blissely">
-          <p className="navbar-link">Blissely</p>
+          <p
+            className={
+              observedSection === "blissely"
+                ? "navbar-link link-selected"
+                : "navbar-link"
+            }
+          >
+            Blissely
+          </p>
         </a>
         <a href="#photo-website">
-          <p className="navbar-link">Photography Website</p>
+          <p
+            className={
+              observedSection === "photo-website"
+                ? "navbar-link link-selected"
+                : "navbar-link"
+            }
+          >
+            Photography Website
+          </p>
         </a>
         <a href="#bird-nest">
-          <p className="navbar-link">Bird Nest</p>
+          <p
+            className={
+              observedSection === "bird-nest"
+                ? "navbar-link link-selected"
+                : "navbar-link"
+            }
+          >
+            Bird Nest
+          </p>
         </a>
         <a href="#trading-bot">
-          <p className="navbar-link">Crypto Trading Bot</p>
+          <p
+            className={
+              observedSection === "crypto-bot"
+                ? "navbar-link link-selected"
+                : "navbar-link"
+            }
+          >
+            Crypto Trading Bot
+          </p>
         </a>
+      </div>
+      <div className="dropdown-wrapper">
+        <Dropdown observedSection={observedSection} />
       </div>
     </div>
   );

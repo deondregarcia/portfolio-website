@@ -37,7 +37,27 @@ const birdNestObserverRight = new IntersectionObserver(function (
 },
 birdNestOptions);
 
-const BirdNest = () => {
+const BirdNest = ({
+  setObservedSection,
+}: {
+  setObservedSection: React.Dispatch<React.SetStateAction<string>>;
+}) => {
+  const sectionObserver = new IntersectionObserver(
+    function (entries, sectionObserver) {
+      entries.forEach((entry) => {
+        if (!entry.isIntersecting) {
+          return;
+        } else {
+          setObservedSection("bird-nest");
+        }
+      });
+    },
+    {
+      root: null,
+      threshold: 0.1,
+    }
+  );
+
   useEffect(() => {
     const birdNestFeaturesLeft = document.querySelectorAll(".bn-feature-left");
     birdNestFeaturesLeft.forEach((feature) => {
@@ -48,6 +68,11 @@ const BirdNest = () => {
       document.querySelectorAll(".bn-feature-right");
     birdNestFeaturesRight.forEach((feature) => {
       birdNestObserverRight.observe(feature);
+    });
+
+    const section = document.querySelectorAll(".bn-container");
+    section.forEach((section) => {
+      sectionObserver.observe(section);
     });
 
     return () => {

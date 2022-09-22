@@ -29,7 +29,7 @@ const graphicObserver = new IntersectionObserver(
         return;
       } else {
         entry.target.classList.add("fade-in");
-        featureObserver.unobserve(entry.target);
+        graphicObserver.unobserve(entry.target);
       }
     });
   },
@@ -39,7 +39,27 @@ const graphicObserver = new IntersectionObserver(
   }
 );
 
-const Blissely = () => {
+const Blissely = ({
+  setObservedSection,
+}: {
+  setObservedSection: React.Dispatch<React.SetStateAction<string>>;
+}) => {
+  const sectionObserver = new IntersectionObserver(
+    function (entries, sectionObserver) {
+      entries.forEach((entry) => {
+        if (!entry.isIntersecting) {
+          return;
+        } else {
+          setObservedSection("blissely");
+        }
+      });
+    },
+    {
+      root: null,
+      threshold: 0.1,
+    }
+  );
+
   useEffect(() => {
     const featureBubbles = document.querySelectorAll(".feature-bubble");
     featureBubbles.forEach((feature) => {
@@ -49,6 +69,11 @@ const Blissely = () => {
     const graphicImages = document.querySelectorAll(".graphic-fade");
     graphicImages.forEach((image) => {
       graphicObserver.observe(image);
+    });
+
+    const section = document.querySelectorAll(".blissely-container");
+    section.forEach((section) => {
+      sectionObserver.observe(section);
     });
 
     return () => {
