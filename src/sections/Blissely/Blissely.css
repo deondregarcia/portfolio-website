@@ -173,9 +173,6 @@
 .blissely-details {
   display: flex;
   flex-direction: column;
-  /* justify-content: center; */
-  /* align-items: center; */
-  /* background-color: red; */
 }
 
 .blissely-graphics-wrapper {
@@ -188,13 +185,22 @@
   width: 30%;
   object-fit: contain;
   background-color: white;
-  border-radius: 50px;
+  border-radius: 10px;
   border: 2px solid var(--blissely-dark);
 }
 .blissely-screenshot {
-  width: 40%;
+  width: 45%;
   border-radius: 10px;
   border: 2px solid var(--blissely-dark);
+}
+
+.graphic-fade {
+  opacity: 0;
+  transform: translateY(20%);
+}
+
+.fade-in {
+  animation: fade-in 1000ms forwards;
 }
 
 @keyframes bubble-in {
@@ -214,12 +220,93 @@
     opacity: 1;
     transform: scale(1.04);
   }
-  /* 90% {
-    opacity: 1;
-    transform: scale(1.01);
-  } */
   100% {
     opacity: 1;
     transform: scale(1);
+  }
+}
+
+@keyframes fade-in {
+  0% {
+    transform: translateY(20%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .blissely-what {
+    padding-bottom: 20px;
+  }
+  .blissely-header-wrapper {
+    width: 90%;
+  }
+  .blissely-header-text {
+    font-size: 20px;
+  }
+  .blissely-text {
+    font-size: 17px;
+  }
+  .blissely-details {
+    flex-direction: row;
+  }
+  .blissely-graphics-wrapper {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .blissely-graphic-flow {
+    width: 95%;
+    border-radius: 10px;
+    margin-bottom: 10px;
+  }
+  .blissely-screenshot {
+    width: 95%;
+    margin-bottom: 10px;
+    margin-left: 10px;
+  }
+  .blissely-features {
+    height: min-content;
+  }
+  .blissely-features > div {
+    border-radius: 10px;
+  }
+  .category-one,
+  .category-two,
+  .category-three,
+  .category-four {
+    position: relative;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 90%;
+    text-align: center;
+  }
+  .feature-one,
+  .feature-two,
+  .feature-three,
+  .feature-four,
+  .feature-five,
+  .feature-six {
+    position: relative;
+    top: 0;
+    left: 0;
+    margin: 10px auto;
+    width: 90%;
+  }
+  .blissely-subheader {
+    font-size: 20px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .blissely-details {
+    flex-direction: column;
+  }
+  .blissely-screenshot {
+    margin-left: 0;
   }
 }

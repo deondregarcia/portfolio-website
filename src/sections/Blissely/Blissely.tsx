@@ -4,31 +4,50 @@ import "./Blissely.css";
 
 const blisselyOptions = {
   root: null,
-  threshold: 0.3,
-  rootMargin: " 0px 0px -80px 0px"
+  threshold: 0.8,
 };
 
-const blisselyObserver = new IntersectionObserver(function(entries, blisselyObserver) {
+const featureObserver = new IntersectionObserver(function(entries, featureObserver) {
   entries.forEach(entry => {
     if (!entry.isIntersecting) {
       return;
     } else {
       entry.target.classList.add("feature-appear");
-      blisselyObserver.unobserve(entry.target);
+      featureObserver.unobserve(entry.target);
     }
   })
-}, blisselyOptions)
+}, blisselyOptions);
+
+const graphicObserver = new IntersectionObserver(function(entries, graphicObserver) {
+  entries.forEach(entry => {
+    if (!entry.isIntersecting) {
+      return;
+    } else {
+      entry.target.classList.add("fade-in");
+      featureObserver.unobserve(entry.target);
+    }
+  })
+}, {
+  root: null,
+  threshold: 0.1
+});
 
 const Blissely = () => {
 
   useEffect(() => {
     const featureBubbles = document.querySelectorAll(".feature-bubble");
     featureBubbles.forEach(feature => {
-      blisselyObserver.observe(feature);
-    })
+      featureObserver.observe(feature);
+    });
+
+    const graphicImages = document.querySelectorAll(".graphic-fade");
+    graphicImages.forEach(image => {
+      graphicObserver.observe(image);
+    });
 
     return () => {
-      blisselyObserver.disconnect();
+      featureObserver.disconnect();
+      graphicObserver.disconnect();
     }
   }, [])
 
@@ -51,7 +70,7 @@ const Blissely = () => {
               Blissely is a full stack, production-ready web app where friends and family can create and edit shared bucket lists.
             </p>
             <p className="blissely-header-text">
-              Blissely blocks users from seeing other bucket lists based on four categories:
+              Privacy settings for bucket lists are configured based on four different categories:
             </p>
           </div>
           <div className="blissely-text category-one">
@@ -102,31 +121,31 @@ const Blissely = () => {
         </div>
       </div>
       <div className="blissely-separator" />
-      <div className="blissely-details">
       <h3 className="blissely-features-header">Graphics</h3>
       <p className="blissely-subheader">
         Control flow for authorization checks, database schema, and website screenshots
       </p>
+      <div className="blissely-details">
         <div className="blissely-graphics-wrapper">
           <img
-            className="blissely-graphic-flow"
+            className="blissely-graphic-flow graphic-fade" style={{ animationDelay: "400ms"}}
             src={imagesIndex.BucketListPrivacy}
             alt="Bucket List Auth Flow"
           />
             <img
-              className="blissely-graphic-flow"
+              className="blissely-graphic-flow graphic-fade" style={{ animationDelay: "800ms"}}
               src={imagesIndex.BlisselyDatabaseSchema}
               alt="Blissely database schema"
             />
           <img
-            className="blissely-graphic-flow"
+            className="blissely-graphic-flow graphic-fade" style={{ animationDelay: "1200ms"}}
             src={imagesIndex.ViewingProfiles}
             alt="Viewing Profiles Auth Flow"
           />
         </div>
         <div className="blissely-graphics-wrapper">
-          <img className="blissely-screenshot" src={imagesIndex.BlisselyLanding} alt="Blissely landing page" />
-          <img className="blissely-screenshot" src={imagesIndex.BlisselyHome} alt="Blissely sample home page" />
+          <img className="blissely-screenshot graphic-fade" style={{ animationDelay: "400ms"}} src={imagesIndex.BlisselyLanding} alt="Blissely landing page" />
+          <img className="blissely-screenshot graphic-fade" style={{ animationDelay: "800ms"}} src={imagesIndex.BlisselyHome} alt="Blissely sample home page" />
         </div>
       </div>
     </div>
