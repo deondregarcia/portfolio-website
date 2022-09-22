@@ -2,6 +2,12 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  position: relative;
+}
+
+.bn-id {
+  position: absolute;
+  top: -60px;
 }
 
 .bn-header {

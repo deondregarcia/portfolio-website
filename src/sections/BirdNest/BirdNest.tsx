@@ -58,6 +58,8 @@ const BirdNest = () => {
 
   return (
     <div className="bn-container">
+      {/* separate div for id so that I can raise it up to account for navbar */}
+      <div id="bird-nest" className="bn-id" />
       <p className="bn-header">Bird Nest</p>
       <p className="bn-subheader">
         Tech Stack: React Native, Javascript, Redux, Node, Express, and MySQL

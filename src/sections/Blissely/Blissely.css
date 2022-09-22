@@ -1,3 +1,12 @@
+.blissely-container {
+  position: relative;
+}
+
+.blissely-id {
+  position: absolute;
+  top: -60px;
+}
+
 .blissely-header {
   font-size: 100px;
   font-family: "Sarabun";

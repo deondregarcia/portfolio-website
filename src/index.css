@@ -1,6 +1,7 @@
 :root {
   --main-fill: #0b0b16;
   --main-outline: #5eb0df;
+  --main-gray: #a1a1a1;
   --blissely-dark: #8442f7;
   --blissely-light: #bba8db;
   --photo-web-golden: #ebad11;
@@ -11,14 +12,6 @@
   box-sizing: border-box;
   padding: 0;
   margin: 0;
-}
-/* 
-body {
-  background-color: black;
-} */
-
-html {
-  scroll-behavior: smooth;
 }
 
 @font-face {

@@ -58,6 +58,8 @@ const TradingBot = () => {
 
   return (
     <div className="tb-container">
+      {/* separate div for id so that I can raise it up to account for navbar */}
+      <div id="trading-bot" className="tb-id" />
       <p className="tb-header">Cryptocurrency Trading Bot</p>
       <p className="tb-subheader">Tech Stack: Python, Flask, and React</p>
       <a

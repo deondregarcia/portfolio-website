@@ -3,6 +3,12 @@
   flex-direction: column;
   align-items: center;
   background-color: #000000e6;
+  position: relative;
+}
+
+.pw-id {
+  position: absolute;
+  top: -60px;
 }
 
 .pw-header {
