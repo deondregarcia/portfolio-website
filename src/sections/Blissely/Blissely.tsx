@@ -59,7 +59,7 @@ const Blissely = () => {
         Aurora
       </p>
       <a className="blissely-link" href="https://blissely.herokuapp.com">
-        <h2>Live website: https://blissely.herokuapp.com</h2>
+        <h2>Link to live website</h2>
       </a>
       <div className="blissely-description">
       <div className="blissely-separator" />

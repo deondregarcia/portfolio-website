@@ -12,9 +12,13 @@ function App() {
     <div className="App">
       <Navbar />
       <Landing />
+      <div className="section-separator" />
       <Blissely />
+      <div className="section-separator" />
       <BirdNest />
+      <div className="section-separator" />
       <PhotoWebsite />
+      <div className="section-separator" />
       <TradingBot />
     </div>
   );

@@ -13,7 +13,7 @@
 
 .blissely-link {
   font-size: 20px;
-  text-decoration: none;
+  text-decoration: underline;
   text-align: center;
   color: var(--blissely-dark);
 }
@@ -23,7 +23,6 @@
   width: 90%;
   margin: 25px auto;
   border-radius: 10px;
-  /* background-color: red; */
   background-color: #a1a1a1;
 }
 

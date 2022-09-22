@@ -23,3 +23,7 @@ html {
   font-family: "Sarabun";
   src: url("./assets/fonts/blissely/Sarabun-Light.ttf") format("truetype");
 }
+@font-face {
+  font-family: "Pacifico";
+  src: url("./assets/fonts/Pacifico/Pacifico-Regular.ttf") format("truetype");
+}

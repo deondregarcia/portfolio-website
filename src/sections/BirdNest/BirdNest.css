@@ -1,3 +1,81 @@
-.bn-container {
+/* .bn-container {
+  background-color: black;
+} */
+
+.bn-header {
+  font-size: 100px;
+  font-family: "Pacifico";
+  color: var(--blissely-dark);
+  text-align: center;
+}
+
+.bn-subheader {
+  text-align: center;
+  font-size: 25px;
+  margin: 15px 0;
+}
+
+.bn-link {
+  font-size: 20px;
+  text-decoration: underline;
+  text-align: center;
+  color: var(--blissely-dark);
+}
+
+.bn-separator {
+  height: 2px;
+  width: 90%;
+  margin: 25px auto;
+  border-radius: 10px;
+  background-color: #a1a1a1;
+}
+.bn-what {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.bn-what-header,
+.bn-features-header {
+  font-size: 40px;
+  font-family: "Sarabun";
+  text-align: center;
+  text-decoration: underline;
+  text-decoration-color: var(--blissely-dark);
+}
+
+.bn-header-text {
+  font-size: 25px;
+  font-family: Arial;
+  width: 60%;
+  text-align: center;
+  margin: 20px 0;
+}
+
+.bn-features {
+  display: flex;
+  justify-content: space-around;
   background-color: green;
+}
+
+.bn-features-col {
+  width: 40%;
+  background-color: blue;
+}
+
+.bn-features-text {
+  background-color: red;
+}
+
+.bn-images-container {
+  display: flex;
+  justify-content: space-around;
+}
+
+.bn-images-container > img {
+  width: 20%;
+  height: auto;
+  border-radius: 30px;
+  object-fit: fill;
 }
