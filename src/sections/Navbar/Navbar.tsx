@@ -7,6 +7,7 @@ const Navbar = ({ observedSection }: { observedSection: string }) => {
     <div className="navbar-container">
       <a href="#landing">
         <h3 className="navbar-header">Deondre Garcia's Portfolio</h3>
+        <div className="navbar-header-500"></div>
       </a>
       <div className="navbar-links-container">
         <a href="#blissely">

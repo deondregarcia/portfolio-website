@@ -1,52 +1,57 @@
 .input-box {
-    position: relative;
-    width: 180px;
-    height: 30px;
-    border-radius: 3px;
-    background-color: var(--main-outline);
+  position: absolute;
+  width: 180px;
+  height: 30px;
+  bottom: 5px;
+  border-radius: 3px;
+  background-color: var(--main-outline);
+  z-index: 6;
 }
 .input-box > h3 {
-    text-align: center;
-    padding-top: 3px;
-    font-size: 20px;
-    font-family: "Sarabun";
+  text-align: center;
+  padding-top: 3px;
+  font-size: 18px;
+  font-family: "Sarabun";
 }
 
 .dropdown-list-wrapper {
-    position: absolute;
-    bottom: 0;
-    height: 150px;
-    width: 180px;
+  position: relative;
+  bottom: 5px;
+  height: 150px;
+  width: 180px;
 }
 
 .dropdown-list {
-    height: 150px;
-    width: 180px;
-    position: absolute;
-    top: 0;
-    background-color: red;
-    opacity: 0;
+  height: 150px;
+  width: 180px;
+  position: absolute;
+  bottom: 0;
+  background-color: var(--main-fill);
+  border: 2px solid var(--main-outline);
+  border-radius: 0 0 10px 10px;
+  opacity: 0;
 }
 
 .dropdown-list-selected {
-    transform: translateY(150px);
-    opacity: 1;
+  transform: translateY(150px);
+  opacity: 1;
 }
 
 .dropdown-list-container {
-    height: 25%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-bottom: 1px solid var(--main-gray);
+  height: 25%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-top: 1px solid var(--main-gray);
 }
 
-.dropdown-list-container > a {
-    text-decoration: none;
+.dropdown-list > a {
+  text-decoration: none;
 }
 
 .dropdown-list-text {
-    font-size: 20px;
-    text-align: center;
-    background-color: purple;
+  font-size: 18px;
+  text-align: center;
+  font-family: "Sarabun";
+  color: var(--photo-web-white);
 }

@@ -81,3 +81,19 @@
     display: none;
   }
 }
+
+@media screen and (max-width: 600px) {
+  .navbar-header {
+    font-size: 20px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .dropdown-wrapper {
+    margin-left: 5px;
+  }
+  .navbar-header {
+    font-size: 18px;
+    left: 10px;
+  }
+}

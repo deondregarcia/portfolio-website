@@ -6,8 +6,8 @@ const Dropdown = ({ observedSection }: { observedSection: string }) => {
 
   return (
     <div className="dropdown-container">
-      <div onClick={() => setSelected(true)} className="input-box">
-        <h3>{observedSection}</h3>
+      <div onClick={() => setSelected(!selected)} className="input-box">
+        <h3>{observedSection === "blissely" ? "Blissely" : (observedSection === "photo-website" ? "Photography Website" : (observedSection === "bird-nest" ? "Bird Nest" : (observedSection === "crypto-bot" ? "Crypto Trading Bot" : "Landing")))}</h3>
       </div>
       <div className="dropdown-list-wrapper">
         <div
@@ -15,38 +15,38 @@ const Dropdown = ({ observedSection }: { observedSection: string }) => {
             selected ? "dropdown-list dropdown-list-selected" : "dropdown-list"
           }
         >
+          <a href="#blissely">
           <div
             onClick={() => setSelected(false)}
             className="dropdown-list-container"
           >
-            <a href="#blissely">
               <p className="dropdown-list-text">Blissely</p>
-            </a>
           </div>
-          <div
-            onClick={() => setSelected(false)}
-            className="dropdown-list-container"
-          >
+            </a>
             <a href="#photo-website">
+          <div
+            onClick={() => setSelected(false)}
+            className="dropdown-list-container"
+          >
               <p className="dropdown-list-text">Photography Website</p>
-            </a>
           </div>
-          <div
-            onClick={() => setSelected(false)}
-            className="dropdown-list-container"
-          >
+            </a>
             <a href="#bird-nest">
-              <p className="dropdown-list-text">Bird Nest</p>
-            </a>
-          </div>
           <div
             onClick={() => setSelected(false)}
             className="dropdown-list-container"
           >
-            <a href="#trading-bot">
-              <p className="dropdown-list-text">Crypto Trading Bot</p>
-            </a>
+              <p className="dropdown-list-text">Bird Nest</p>
           </div>
+            </a>
+            <a href="#trading-bot">
+          <div
+            onClick={() => setSelected(false)}
+            className="dropdown-list-container"
+          >
+              <p className="dropdown-list-text">Crypto Trading Bot</p>
+          </div>
+            </a>
         </div>
       </div>
     </div>
