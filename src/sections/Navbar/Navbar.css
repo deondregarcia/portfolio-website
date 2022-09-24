@@ -16,6 +16,7 @@
 }
 
 .navbar-header {
+  position: relative;
   font-size: 45px;
   color: var(--main-outline);
 }
@@ -49,6 +50,10 @@
   display: none;
 }
 
+.navbar-header-small {
+  display: none;
+}
+
 @media screen and (max-width: 1500px) {
   .navbar-header {
     font-size: 30px;
@@ -70,6 +75,9 @@
 }
 
 @media screen and (max-width: 900px) {
+  .navbar-header {
+    right: 50%;
+  }
   .navbar-container {
     justify-content: center;
   }
@@ -90,10 +98,16 @@
 
 @media screen and (max-width: 500px) {
   .dropdown-wrapper {
-    margin-left: 5px;
+    margin-left: 5%;
   }
   .navbar-header {
-    font-size: 18px;
-    left: 10px;
+    display: none;
+  }
+  .navbar-header-small {
+    position: relative;
+    right: 10%;
+    display: block;
+    font-size: 20px;
+    color: var(--main-outline);
   }
 }
