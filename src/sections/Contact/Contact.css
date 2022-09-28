@@ -1,0 +1,23 @@
+.contact-container {
+    height: 100px;
+}
+
+.contact-container > h3 {
+    margin-top: 10px;
+    font-family: "Sarabun";
+    font-size: 30px;
+    text-align: center;
+}
+
+.contact-container > p {
+    margin-top: 10px;
+    padding-bottom: 40px;
+    font-family: "Sarabun";
+    font-size: 20px;
+    text-align: center;
+}
+
+.contact-container-link {
+    text-decoration: none;
+    color: var(--blissely-dark);
+}

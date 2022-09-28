@@ -110,9 +110,7 @@ const PhotoWebsite = ({
       {/* separate div for id so that I can raise it up to account for navbar */}
       <div id="photo-website" className="pw-id" />
       <p className="pw-header">Photography Portfolio Website</p>
-      <p className="pw-subheader">
-        Tech Stack: React Native, Javascript, Redux, Node, Express, and MySQL
-      </p>
+      <p className="pw-subheader">Tech Stack: React, HTML5, CSS3</p>
       <a
         className="pw-link"
         href="https://deondregarciaphoto.netlify.app"
@@ -122,11 +120,10 @@ const PhotoWebsite = ({
       </a>
       <div className="pw-separator" />
       <div className="pw-what">
-        <h3 className="pw-what-header">What is Bird Nest?</h3>
+        <h3 className="pw-what-header">What is it?</h3>
         <p className="pw-header-text">
-          Bird Nest is a React Native mobile app which provides a faster and
-          more intuitive method of finding housing and roommates for university
-          students.
+          This is a portfolio website I built to show off some of my
+          photographic work, as I do freelance photography on the side.
         </p>
       </div>
       <div className="pw-separator" />
@@ -134,23 +131,21 @@ const PhotoWebsite = ({
       <div className="pw-features">
         <div className="pw-features-col">
           <p className="pw-features-text pw-feature-right">
-            Personal profiles with <strong>questionnaires</strong> and displayed
-            traits geared towards housing preferences
+            Interactive <strong>image carousels</strong>, pre-loaded for
+            improved performance
           </p>
           <p className="pw-features-text pw-feature-left">
-            <strong>Sorting algorithms</strong> that rank potential roommates
-            based on number of matched preferences
+            <strong>Draggable edit sliders</strong> that show the before and
+            after versions of images
           </p>
         </div>
         <div className="pw-features-col pw-col-right">
           <p className="pw-features-text pw-feature-right">
-            <strong>Filtering algorithms</strong> which, on top of the sorting
-            feature, allows users to apply more granular and variable
-            specifications on which type of roommate is desired
+            <strong>Intersection observers</strong> to implement lazy loading
+            and a dynamic navigation bar
           </p>
           <p className="pw-features-text pw-feature-left">
-            <strong>Messaging</strong>, profile editing,{" "}
-            <strong>matchmaking</strong>, image uploading, and much, much more
+            Typewriter text effects, and much more!
           </p>
         </div>
       </div>
