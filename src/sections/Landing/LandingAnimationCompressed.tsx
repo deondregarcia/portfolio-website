@@ -2082,13 +2082,13 @@ export function LandingAnimation(props: JSX.IntrinsicElements["group"]) {
             position={[-1.19, -0.25, -0.04]}
             scale={[0.26, 0.79, 0.79]}
           />
-          <mesh
+          {/* <mesh
             name="Cube011"
             geometry={nodes.Cube011.geometry}
             material={materials["Material.027"]}
             position={[-0.77, -0.92, 1.04]}
             scale={[0.1, 0.31, 0.31]}
-          />
+          /> */}
           <mesh
             name="Cube012"
             geometry={nodes.Cube012.geometry}
@@ -2115,20 +2115,6 @@ export function LandingAnimation(props: JSX.IntrinsicElements["group"]) {
             geometry={nodes.Cube015.geometry}
             material={materials["Material.024"]}
             position={[-0.77, -0.92, -0.96]}
-            scale={[0.1, 0.31, 0.31]}
-          />
-          <mesh
-            name="Cube016_1"
-            geometry={nodes.Cube016_1.geometry}
-            material={materials["Material.023"]}
-            position={[-0.51, -0.92, -0.96]}
-            scale={[0.1, 0.31, 0.31]}
-          />
-          <mesh
-            name="Cube017"
-            geometry={nodes.Cube017.geometry}
-            material={materials["Material.021"]}
-            position={[0.76, -0.92, -0.96]}
             scale={[0.1, 0.31, 0.31]}
           />
           <mesh
